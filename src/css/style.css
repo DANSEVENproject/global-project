@@ -784,7 +784,8 @@ img {
   }
 }
 
-.modal {
+.modal,
+.validate {
   position: fixed;
   top: 0;
   left: 0;
@@ -794,13 +795,15 @@ img {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.modal_active {
+.modal_active,
+.validate_active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.modal-dialog {
+.modal-dialog,
+.validate-dialog {
   position: relative;
   margin: auto;
   max-width: 450px;
@@ -810,7 +813,8 @@ img {
   padding: 40px;
 }
 
-.modal-dialog__close {
+.modal-dialog__close,
+.validate-dialog__close {
   position: absolute;
   top: 0;
   right: 0;

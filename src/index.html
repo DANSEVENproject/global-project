@@ -4,9 +4,6 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/slick.css">
-    <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/style.css">
     <!-- Yandex.Metrika counter -->
     <script>
@@ -104,7 +101,7 @@
                 <form action="#" id="registration-form" class="registration__form">
                     <input class="input registration__name" name="username" type="text" placeholder="Ваше имя">
                     <input class="input registration__number phone" name="phone" type="tel" placeholder="Ваш телефон">
-                    <button class="button registration__button" onclick="ym(223378574, 'reachGoal', 'registration__button'); return true;">Получить бесплатный дизайн-проект</button>
+                    <button class="button registration__button" id="button-window" onclick="ym(223378574, 'reachGoal', 'registration__button'); return true;">Получить бесплатный дизайн-проект</button>
                 </form>
                 <div class="registration__call">
                     <div class="registration__call-you">
@@ -414,16 +411,23 @@
                 </ul>
             </div>
         </div>
-    </footer> -->
+    </footer>
 
 
     <div class="modal" id="modal">
         <div class="modal-dialog">
-            <button class="modal-dialog__close" id="close">&times</button>
+            <button class="modal-dialog__close" id="close-modal">&times</button>
             <h4 class="modal-dialog__title">Всплывающее окно</h4>
         </div>
     </div>
 
+
+    <div class="validate" id="validate-window">
+        <div class="validate-dialog">
+            <button class="validate-dialog__close" id="close-window">&times</button>
+            <h4 class="validate-dialog__title">Спасибо за заявку, скоро мы вам перезвоним.</h4>
+        </div>
+    </div>
 
     <button class="button swipe-up" id="swipe-up">
         <img src="img/iconmonstr-arrow-up-thin.svg" alt="Стрелка вверх">
@@ -437,93 +441,7 @@
     <script src="js/wow.min.js "></script>
     <script src="js/jquery.validate.min.js "></script>
     <script src="js/jquery.masked-input.min.js "></script>
-
-
-    <script>
-        /*initialization animation-script*/
-        new WOW().init();
-
-        $(function() {
-
-            /*validation-script*/
-            $('#brif-form').validate({
-                errorClass: "invalid",
-                errorElement: "div",
-                rules: {
-                    username: {
-                        required: true,
-                        minlength: 2,
-                        maxlength: 15
-                    },
-                    email: {
-                        required: true,
-                        email: true
-                    },
-                    phone: {
-                        required: true
-                    }
-
-                },
-                messages: {
-                    username: {
-                        required: "Заполните поле",
-                        minlength: "Минимальное количество символов: 2",
-                        maxlength: "Максимальное количество символов: 15"
-                    },
-                    phone: "Заполните поле",
-                    email: "Введите корректный email"
-                }
-            });
-            $('#registration-form').validate({
-                errorClass: "invalid",
-                errorElement: "div",
-                rules: {
-                    username: {
-                        required: true,
-                        minlength: 2,
-                        maxlength: 15
-                    },
-                    phone: {
-                        required: true
-                    }
-
-                },
-                messages: {
-                    username: {
-                        required: "Заполните поле",
-                        minlength: "Минимальное количество символов: 2",
-                        maxlength: "Максимальное количество символов: 15"
-                    },
-                    phone: "Заполните поле",
-                }
-            });
-
-            /*Mask form-script*/
-            $('.phone').mask('8 (999) 999-99-99');
-
-
-            /*Slick-script-*/
-            $('.slider').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                prevArrow: $('.portfolio__arrows__left'),
-                nextArrow: $('.portfolio__arrows__right'),
-                responsive: [{
-                    breakpoint: 1200,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 1,
-                    }
-                }, {
-                    breakpoint: 768,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1,
-                    }
-                }]
-            });
-        });
-    </script>
+    <script src="js/scripts.js"></script>
 
 </body>
 
