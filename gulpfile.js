@@ -59,5 +59,4 @@ exports.moveHtml = moveHtml;
 exports.moveFonts = moveFonts;
 exports.compressImg = compressImg;
 
-exports.moveJs = series(moveMinJs, compressJs);
-//exports.default = series(moveCss, moveJs, moveHtml, moveFonts, compressImg);
+exports.default = series(moveCss, moveMinJs, compressJs, moveHtml, moveFonts, compressImg);

@@ -231,28 +231,32 @@ img {
   }
 }
 
-#list-item-1 {
+#hero__list-item-1,
+#brif__list-item-1 {
   -webkit-animation: fadeIn;
           animation: fadeIn;
   -webkit-animation-duration: 1.0s;
           animation-duration: 1.0s;
 }
 
-#list-item-2 {
+#hero__list-item-2,
+#brif__list-item-2 {
   -webkit-animation: fadeIn;
           animation: fadeIn;
   -webkit-animation-duration: 2.5s;
           animation-duration: 2.5s;
 }
 
-#list-item-3 {
+#hero__list-item-3,
+#brif__list-item-3 {
   -webkit-animation: fadeIn;
           animation: fadeIn;
   -webkit-animation-duration: 4.0s;
           animation-duration: 4.0s;
 }
 
-#list-item-4 {
+#hero__list-item-4,
+#brif__list-item-4 {
   -webkit-animation: fadeIn;
           animation: fadeIn;
   -webkit-animation-duration: 5.0s;

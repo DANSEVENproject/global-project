@@ -19,5 +19,11 @@
   "homepage": "https://github.com/DANSEVENproject/global-project#readme",
   "dependencies": {
     "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "gulp-clean-css": "^4.3.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-jsmin": "^0.1.5",
+    "gulp-tinypng-compress": "^1.2.5"
   }
 }
