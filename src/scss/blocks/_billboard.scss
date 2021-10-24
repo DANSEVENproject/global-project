@@ -1,0 +1,38 @@
+.billboard {
+    background-color: $main-color;
+    @include center;
+    &__title {
+        font-size: 32px;
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+}
+
+@media (max-width:1200px) {
+    .billboard {
+        &__title {
+            padding-left: 50px;
+            padding-right: 50px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .billboard {
+        padding: 0px 0px;
+        height: 230px;
+        &__title {
+            font-size: 26px;
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .billboard {
+        &__title {
+            font-size: 18px;
+        }
+    }
+}

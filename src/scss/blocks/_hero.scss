@@ -1,0 +1,133 @@
+.hero {
+    padding-top: 50px;
+    padding-bottom: 52px;
+    background-color: $background-secondary;
+    &__block {
+        @include block;
+        justify-content: baseline;
+    }
+    &__text {
+        flex-basis: 50%;
+        padding-right: 70px;
+        display: flex;
+        flex-direction: column;
+    }
+    &__main-title {
+        margin-top: 0px;
+        @include title;
+        font-size: 41px;
+        line-height: 55px;
+        margin-bottom: 70px;
+    }
+    &__subtitle {
+        text-align: left;
+        font-size: 20px;
+        margin-bottom: 70px;
+    }
+    &__list {
+        &-image {
+            height: 40px;
+            flex-basis: 40px;
+            border-radius: 50%;
+            margin-right: 30px;
+            @include center;
+            border: 2px solid $main-color;
+        }
+        &-item {
+            align-items: center;
+            margin-bottom: 25px;
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+        &-description {
+            max-width: 300px;
+            @include subtitle;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .hero {
+        &__image {
+            & img {
+                width: 639px;
+                height: 557px;
+            }
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .hero {
+        &__block {
+            flex-direction: column;
+        }
+        &__image {
+            margin-top: 44px;
+            & img {
+                width: 570px;
+                height: 488px;
+            }
+        }
+        &__text {
+            padding-right: 10px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .hero {
+        &__main-title {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        &__subtitle {
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+        &__list {
+            &-description {
+                font-size: 12px;
+            }
+            &-item {
+                margin-bottom: 20px;
+            }
+            &-image {
+                margin-right: 15px;
+            }
+        }
+    }
+}
+
+@media (max-width:600px) {
+    .hero {
+        &__image {
+            & img {
+                max-width: auto;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .hero {
+        &__main-title {
+            line-height: 1.2;
+        }
+        &__subtitle {
+            font-size: 14px;
+            max-width: 200px;
+        }
+        &__list {
+            &__image {
+                margin-top: 40px;
+            }
+            &-description {
+                max-width: 200px;
+            }
+        }
+    }
+}

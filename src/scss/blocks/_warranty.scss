@@ -1,0 +1,295 @@
+.warranty {
+    &__title {
+        @include center;
+        &-important {
+            font-size: 30px;
+            padding-left: 250px;
+            padding-right: 250px;
+            line-height: 1.5;
+            padding-top: 140px;
+            padding-bottom: 100px;
+        }
+    }
+    &__block-documents {
+        display: flex;
+        justify-content: space-around;
+    }
+    &__block-cards {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__card {
+        &-1,
+        &-2,
+        &-3 {
+            position: relative;
+        }
+        &-main-image {
+            left: 0px;
+            top: 0px;
+            max-width: 370px;
+        }
+        &-image {
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            max-width: 370px;
+        }
+        &-subtitle {
+            position: absolute;
+            left: 25px;
+            top: 30px;
+            @include subtitle;
+            max-width: 290px;
+        }
+    }
+    &__document {
+        display: flex;
+        flex-direction: column;
+        &-outline {
+            border: 20px solid $background-secondary;
+            background-color: #fff;
+            & img {
+                max-width: 219px;
+                height: 308px;
+            }
+        }
+        &-subtitle {
+            max-width: 270px;
+            @include subtitle;
+            text-align: center;
+            margin-top: 45px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+    }
+}
+
+@media (max-width:1200px) {
+    .warranty {
+        &__block-documents {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        &__block-cards {
+            margin-bottom: 430px;
+        }
+        &__card {
+            &-2 {
+                left: 60px;
+            }
+            &-3 {
+                right: 490px;
+                top: 440px;
+            }
+            &-main-image {
+                max-width: 350px;
+            }
+            &-image {
+                max-width: 350px;
+            }
+            &-subtitle {
+                max-width: 290px;
+            }
+        }
+        &__document {
+            &-outline {
+                border: 8px solid $background-secondary;
+            }
+            &-subtitle {
+                max-width: 230px;
+            }
+        }
+        &__title {
+            &-important {
+                padding-left: 50px;
+                padding-right: 50px;
+                padding-top: 70px;
+                padding-bottom: 50px;
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .warranty {
+        &__block-documents {
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        &__block-cards {
+            margin-bottom: 900px;
+        }
+        &__card {
+            &-1 {
+                left: 110px;
+            }
+            &-2 {
+                left: -260px;
+                top: 460px;
+            }
+            &-3 {
+                left: -630px;
+                top: 920px;
+            }
+            &-main-image {
+                max-width: 370px;
+            }
+            &-image {
+                max-width: 370px;
+            }
+            &-subtitle {
+                max-width: 290px;
+            }
+        }
+        &__document {
+            margin-bottom: 40px;
+            &:first-child {
+                margin-right: 65px;
+            }
+            &-outline {
+                border: 20px solid $background-secondary;
+            }
+        }
+        &__title {
+            padding: 0px 0px;
+            height: 210px;
+            &-important {
+                font-size: 26px;
+                padding-left: 0px;
+                padding-right: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width:610px) {
+    .warranty {
+        &__block-documents {
+            padding: 0px 90px;
+        }
+        &__block-cards {
+            margin-bottom: 820px;
+        }
+        &__card {
+            &-1 {
+                left: 130px;
+            }
+            &-2 {
+                left: -190px;
+                top: 410px;
+            }
+            &-3 {
+                left: -510px;
+                top: 820px;
+            }
+            &-main-image {
+                max-width: 320px;
+            }
+            &-image {
+                max-width: 320px;
+            }
+            &-subtitle {
+                max-width: 270px;
+            }
+        }
+        &__document {
+            max-width: 250px;
+            &:first-child {
+                margin-right: 0px;
+            }
+        }
+    }
+}
+
+@media (max-width:480px) {
+    .warranty {
+        &__card {
+            &-1 {
+                left: 70px;
+            }
+            &-2 {
+                left: -250px;
+                top: 410px;
+            }
+            &-3 {
+                left: -570px;
+                top: 820px;
+            }
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .warranty {
+        &__title {
+            &-important {
+                line-height: 1.2;
+                font-size: 18px;
+            }
+        }
+        &__block-documents {
+            padding: 0px 0px;
+        }
+        &__card {
+            &-1 {
+                left: 30px;
+            }
+            &-2 {
+                left: -250px;
+                top: 360px;
+            }
+            &-3 {
+                left: -530px;
+                top: 720px;
+            }
+            &-main-image {
+                max-width: 280px;
+            }
+            &-image {
+                max-width: 280px;
+            }
+            &-subtitle {
+                max-width: 250px;
+            }
+        }
+        &__document {
+            margin-bottom: 45px;
+            &-subtitle {
+                margin-bottom: 30px;
+                line-height: 1.2;
+                font-size: 14px;
+            }
+            &-outline {
+                border: 15px solid $background-secondary;
+            }
+        }
+    }
+}
+
+@media (max-width:350px) {
+    .warranty {
+        &__card {
+            &-1 {
+                left: 0px;
+            }
+            &-2 {
+                left: -270px;
+                top: 360px;
+            }
+            &-3 {
+                left: -540px;
+                top: 720px;
+            }
+            &-main-image {
+                max-width: 270px;
+            }
+            &-image {
+                max-width: 270px;
+            }
+            &-subtitle {
+                max-width: 240px;
+            }
+        }
+    }
+}

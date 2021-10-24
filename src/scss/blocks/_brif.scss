@@ -1,0 +1,213 @@
+.brif {
+    background-image: url('../img/brif/left-image.png'), url('../img/brif/right-image.png');
+    background-position: left center, center right;
+    background-size: 50%, contain;
+    background-repeat: repeat-y, no-repeat;
+    padding-bottom: 100px;
+    background-color: $background-secondary;
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    &__title {
+        max-width: 682px;
+        font-size: 22px;
+        margin-bottom: 50px;
+        text-align: left;
+    }
+    &__subtitle {
+        margin-bottom: 95px;
+    }
+    &__text-block {
+        display: flex;
+        text-align: left;
+        flex-direction: column;
+        width: 50%;
+    }
+    &__list {
+        /*КОСТЫЛЬ*/
+        background-image: url('../img/brif/left-image.png'), url('../img/brif/left-image.png');
+        background-position: left center, center right;
+        background-size: 100%, cover;
+        background-repeat: repeat-y, repeat-y;
+        &-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+        &:last-child {
+            margin-bottom: 0px;
+        }
+        &-image {
+            & p {
+                margin: 0 auto;
+                padding-left: 4px
+            }
+            height: 40px;
+            flex-basis: 40px;
+            border-radius: 50%;
+            margin-right: 30px;
+            @include center;
+            border: 2px solid #000000;
+        }
+        &-description {
+            @include subtitle;
+            max-width: 300px;
+            font-family: $title-font;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        &-block {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 375px;
+        }
+        &-title {
+            max-width: 330px;
+            margin-bottom: 50px;
+            text-align: center;
+            font-size: 22px;
+        }
+        &-subtitle {
+            margin-bottom: 50px;
+        }
+    }
+    &__button {
+        width: 100%;
+        min-height: 60px;
+        margin-bottom: 35px;
+        font-family: $title-font;
+    }
+    &__call-you {
+        @include subtitle;
+        font-size: 15px;
+    }
+    &__name {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    &__number {
+        margin-bottom: 16px;
+        width: 100%;
+    }
+    &__email {
+        margin-bottom: 30px;
+        width: 100%;
+    }
+}
+
+@media (max-width:1200px) {
+    .brif {
+        &__list-description {
+            padding-right: 20px;
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .brif {
+        background-image: url('../img/brif/left-image.png'), url('../img/brif/right-image.png');
+        background-position: top center, center bottom;
+        background-size: 900px, cover;
+        background-repeat: repeat-x, no-repeat;
+        .container {
+            flex-wrap: wrap;
+        }
+        &__list {
+            &-description {
+                padding-right: 0px;
+                width: 100%;
+                font-size: 12px;
+            }
+            &-item {
+                margin-bottom: 20px;
+            }
+        }
+        &__subtitle {
+            margin-bottom: 55px;
+        }
+        &__text-block {
+            margin: 0 auto;
+            width: 100%;
+        }
+        &__form-block {
+            margin: 0 auto;
+            width: 100%;
+            margin-top: 190px;
+        }
+        &__form-title {
+            font-size: 24px;
+            line-height: 1.4;
+            margin-bottom: 15px;
+        }
+        &__form-subtitle {
+            font-size: 16px;
+            margin-bottom: 28px;
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .brif {
+        background-size: 800px, cover;
+        &__form {
+            &-block {
+                margin-top: 150px;
+            }
+            &-title {
+                margin-bottom: 30px;
+                line-height: 1.2;
+                font-size: 18px;
+            }
+            &-subtitle {
+                margin-bottom: 35px;
+                line-height: 1.2;
+                font-size: 14px;
+            }
+        }
+        &__name {
+            margin-bottom: 10px;
+        }
+        &__number {
+            margin-bottom: 10px;
+        }
+        &__email {
+            margin-bottom: 10px;
+        }
+        &__call-you {
+            max-width: 200px;
+            font-size: 14px;
+        }
+        &__title {
+            line-height: 1.2;
+            font-size: 18px;
+            max-width: 230px;
+            margin-bottom: 20px;
+        }
+        &__subtitle {
+            font-size: 14px;
+            max-width: 190px;
+            margin-bottom: 40px;
+        }
+        &__list {
+            &-image {
+                margin-right: 10px;
+                height: 35px;
+                flex-basis: 35px;
+            }
+            &-description {
+                max-width: 200px;
+                font-size: 14px;
+            }
+        }
+        &__button {
+            padding: 5px 39px;
+            line-height: 1.4;
+        }
+    }
+}

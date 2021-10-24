@@ -1,0 +1,224 @@
+    .registration {
+        background: url('../img/registration/registration-image.png') no-repeat;
+        background-position: center right;
+        background-size: contain;
+        position: relative;
+        &:before {
+            content: '';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            background-color: #fff;
+            top: 0;
+            left: 0;
+        }
+        &__block {
+            animation: moveLeft;
+            animation-duration: 1.5s;
+            position: relative;
+            width: 50%;
+            padding-right: 90px;
+            display: flex;
+            flex-direction: column;
+        }
+        &__title {
+            line-height: 35px;
+            padding-right: 140px;
+            text-align: left;
+            margin-bottom: 25px;
+        }
+        &__subtitle {
+            margin-bottom: 27px;
+            padding-right: 250px;
+        }
+        &__name {
+            margin-right: 14px;
+            margin-bottom: 20px;
+        }
+        &__button {
+            width: 100%;
+            font-family: $title-font;
+            min-height: 60px;
+            margin-bottom: 27px;
+        }
+        &__call {
+            display: flex;
+            &-you {
+                max-width: 224px;
+                margin-right: 70px;
+                @include subtitle;
+                font-size: 15px;
+            }
+            &-yourself {
+                display: flex;
+                flex-direction: column;
+            }
+            &-phone {
+                margin-top: 0px;
+                display: inline-block;
+                color: $text-color;
+                text-decoration: none;
+                font-family: $title-font;
+            }
+            &-address {
+                margin-top: 0px;
+                color: $text-color;
+                font-family: $subtitle-description-font;
+            }
+        }
+    }
+    
+    @media (max-width:1200px) {
+        .registration {
+            background-size: cover;
+            &__title {
+                padding-right: 0px;
+            }
+            &__subtitle {
+                padding-right: 0px;
+            }
+            &__number {
+                margin-bottom: 20px;
+            }
+            &__call {
+                &-you {
+                    margin-right: 0px;
+                    padding-right: 45px;
+                    font-size: 14px;
+                }
+                &-address {
+                    padding-right: 0px;
+                    font-size: 14px;
+                }
+                &-phone {
+                    padding-right: 0px;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    
+    @media (max-width:768px) {
+        .registration {
+            &__block {
+                padding-right: 30px;
+            }
+            &__title {
+                font-size: 16px;
+                padding-right: 0px;
+            }
+            &__subtitle {
+                font-size: 12px;
+                padding-right: 0px;
+            }
+            &__number {
+                margin-bottom: 20px;
+                font-size: 13px;
+                width: 100%;
+            }
+            &__name {
+                font-size: 13px;
+                width: 100%;
+            }
+            &__call {
+                &-you {
+                    padding-right: 0px;
+                    font-size: 12px;
+                    margin-right: 35px;
+                }
+                &-address {
+                    padding-right: 0px;
+                    font-size: 12px;
+                }
+                &-phone {
+                    padding-right: 0px;
+                    font-size: 12px;
+                }
+            }
+            &__button {
+                font-size: 14px;
+            }
+        }
+    }
+    
+    @media (max-width:600px) {
+        .registration {
+            background: #fff;
+            &__block {
+                padding-right: 0px;
+                width: 100%;
+            }
+            &__title {
+                font-size: 18px;
+                padding-right: 50px;
+            }
+            &__subtitle {
+                font-size: 14px;
+                padding-right: 40px;
+            }
+            &__name {
+                font-size: 15px;
+            }
+            &__number {
+                font-size: 15px;
+            }
+            &__button {
+                padding-left: 70px;
+                padding-right: 70px;
+            }
+        }
+    }
+    
+    @media (max-width:430px) {
+        .registration {
+            &__title {
+                padding-right: 10px;
+            }
+            &__call {
+                display: block;
+                &-yourself {
+                    display: flex;
+                    flex-direction: column;
+                }
+                &-you {
+                    margin-right: 0px;
+                    max-width: 230px;
+                    font-size: 14px;
+                    margin-bottom: 18px;
+                }
+                &-address {
+                    font-size: 14px;
+                    margin-bottom: 10px;
+                }
+                &-phone {
+                    font-size: 14px;
+                }
+            }
+            &__button {
+                padding: 18px 39px;
+                line-height: 1.4;
+            }
+        }
+    }
+    
+    @media (max-width:420px) {
+        .registration {
+            &__title {
+                line-height: 1.2;
+                font-size: 18px;
+            }
+            &__subtitle {
+                line-height: 1.2;
+                font-size: 14px;
+            }
+            &__name {
+                margin-bottom: 10px;
+            }
+            &__number {
+                margin-bottom: 10px;
+            }
+            &__button {
+                padding: 5px 39px;
+            }
+        }
+    }

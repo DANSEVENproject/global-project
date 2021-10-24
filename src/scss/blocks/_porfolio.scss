@@ -1,0 +1,68 @@
+.portfolio {
+    background: $background-secondary url('../img/portfolio/portfolio.png') repeat-y center left;
+    background-size: 50%;
+    &__title {
+        font-size: 30px;
+        margin: auto;
+        margin-bottom: 100px;
+    }
+    .slider-item {
+        & img {
+            width: 370px;
+            height: 280px;
+            margin: auto;
+        }
+    }
+    &__arrows {
+        display: flex;
+        justify-content: space-between;
+        max-width: 130px;
+        margin: auto;
+        margin-top: 68px;
+        &__left,
+        &__right {
+            transition: all 1s ease-out;
+        }
+    }
+}
+
+@media (min-width:1200px) {
+    .portfolio {
+        &__arrows {
+            &__left,
+            &__right {
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.1);
+                    &::after {
+                        transform: scale(1.0);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:468px) {
+    .portfolio {
+        background-size: 100%;
+        &__title {
+            margin: auto;
+            min-width: 270px;
+            font-size: 18px;
+            margin-top: 0px;
+            margin-bottom: 40px;
+        }
+        &__arrows {
+            margin-top: 46px;
+        }
+    }
+}
+
+@media (max-width:420px) {
+    .portfolio {
+        &__title {
+            font-size: 18px;
+        }
+    }
+}
