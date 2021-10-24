@@ -39,7 +39,7 @@ function moveHtml(cb) {
 }
 
 function moveFonts(cb) {
-    return src('./src/font/**/*')
+    return src('./src/fonts/**/*')
         .pipe(dest('dist/fonts'))
     cb();
 }
