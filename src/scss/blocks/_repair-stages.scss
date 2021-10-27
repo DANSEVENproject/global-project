@@ -3,6 +3,7 @@
     padding-top: 0px;
     margin-top: 0px;
     &__title {
+        font-size: 24px;
         margin-bottom: 60px;
     }
     &__subtitle {
@@ -35,29 +36,6 @@
             margin-bottom: 35px;
             & img {
                 max-width: 36px;
-            }
-        }
-    }
-}
-
-@media (min-width:1200px) {
-    .repair-stages {
-        &__card {
-            &__image {
-                height: 100px;
-                width: 100px;
-            }
-        }
-    }
-    .empty-class {
-        &-1,
-        &-2,
-        &-3,
-        &-4 {
-            & img {
-                width: 75px;
-                max-width: 75px;
-                height: 24px;
             }
         }
     }

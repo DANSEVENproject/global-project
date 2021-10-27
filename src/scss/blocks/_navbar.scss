@@ -3,12 +3,6 @@
     &__block {
         @include block;
     }
-    &__logo {
-        & img {
-            max-width: 155px;
-            max-height: 75px;
-        }
-    }
     &__info {
         display: flex;
         text-align: right;

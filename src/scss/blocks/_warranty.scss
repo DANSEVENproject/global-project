@@ -27,13 +27,11 @@
         &-main-image {
             left: 0px;
             top: 0px;
-            max-width: 370px;
         }
         &-image {
             position: absolute;
             bottom: 0px;
             left: 0px;
-            max-width: 370px;
         }
         &-subtitle {
             position: absolute;
@@ -48,11 +46,7 @@
         flex-direction: column;
         &-outline {
             border: 20px solid $background-secondary;
-            background-color: #fff;
-            & img {
-                max-width: 219px;
-                height: 308px;
-            }
+            background-color: $border-input;
         }
         &-subtitle {
             max-width: 270px;
@@ -145,7 +139,11 @@
         &__document {
             margin-bottom: 40px;
             &:first-child {
+                margin-left: 65px;
                 margin-right: 65px;
+            }
+            &:last-child {
+                margin-left: 34px;
             }
             &-outline {
                 border: 20px solid $background-secondary;
@@ -196,7 +194,11 @@
         &__document {
             max-width: 250px;
             &:first-child {
+                margin-left: 0px;
                 margin-right: 0px;
+            }
+            &:last-child {
+                margin-left: 0px;
             }
         }
     }

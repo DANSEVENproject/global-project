@@ -1,5 +1,9 @@
 @import 'colors';
+@import 'fonts';
 @import 'interface';
+@import 'animate';
+@import 'normalize';
+@import 'slick';
 @import './blocks/navbar';
 @import './blocks/hero';
 @import './blocks/registration';
@@ -11,7 +15,3 @@
 @import './blocks/footer';
 @import './blocks/billboard';
 @import './blocks/warranty';
-@import 'animate';
-@import 'normalize';
-@import 'slick';
-@import 'fonts';

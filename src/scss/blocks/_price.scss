@@ -19,7 +19,7 @@
         animation: fadeInUp;
         animation-duration: 1s;
         margin-bottom: 30px;
-        border: 1px solid #E8E8E8;
+        border: 1px solid $border-card;
         text-align: center;
         transition: 0.2s;
         &-text {
@@ -28,10 +28,6 @@
         }
         &__image {
             position: relative;
-            & img {
-                height: 260px;
-                width: 370px;
-            }
             &::before {
                 content: '';
                 position: absolute;
@@ -39,7 +35,7 @@
                 top: 0;
                 width: 100%;
                 height: 100%;
-                background-image: linear-gradient(to top, rgb(255, 210, 0) 0%, rgba(255, 255, 255, 0) 100%);
+                background-image: linear-gradient(to top, $main-color 0%, $border-card-price-before 100%);
                 opacity: 0;
                 transition: 0.2s;
             }
@@ -76,7 +72,7 @@
     .price {
         &__card {
             &:hover {
-                box-shadow: 0 20px 25px rgba(0, 0, 0, 0.1);
+                box-shadow: 0 20px 25px $border-card-price;
                 .price__card__image::before {
                     opacity: 1;
                 }

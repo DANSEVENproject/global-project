@@ -6,7 +6,7 @@
     width: 100%;
     height: 100%;
     display: none;
-    background-color: rgba(#000, 0.5);
+    background-color: rgba($border-image, 0.5);
     &_active {
         display: flex;
     }
@@ -16,7 +16,7 @@
         max-width: 450px;
         width: 90%;
         min-width: 200px;
-        background-color: #fff;
+        background-color: $border-input;
         padding: 40px;
         &__close {
             position: absolute;

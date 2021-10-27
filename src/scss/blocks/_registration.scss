@@ -12,6 +12,13 @@
             top: 0;
             left: 0;
         }
+        &__name {
+            margin-right: 14px;
+            margin-bottom: 20px;
+        }
+        &__number {
+            margin-bottom: 20px;
+        }
         &__block {
             animation: moveLeft;
             animation-duration: 1.5s;
@@ -22,6 +29,7 @@
             flex-direction: column;
         }
         &__title {
+            font-size: 24px;
             line-height: 35px;
             padding-right: 140px;
             text-align: left;
@@ -30,10 +38,6 @@
         &__subtitle {
             margin-bottom: 27px;
             padding-right: 250px;
-        }
-        &__name {
-            margin-right: 14px;
-            margin-bottom: 20px;
         }
         &__button {
             width: 100%;
@@ -143,7 +147,7 @@
     
     @media (max-width:600px) {
         .registration {
-            background: #fff;
+            background: $border-input;
             &__block {
                 padding-right: 0px;
                 width: 100%;

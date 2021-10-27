@@ -2,11 +2,14 @@
         new WOW().init();
 
         $(function() {
-
             /*validation-script*/
             $('#brif-form').validate({
                 errorClass: "invalid",
                 errorElement: "div",
+                submitHandler: function() {
+                    $('#brif-form')[0].reset();
+                    alert('Форма успешно отправлена!');
+                },
                 rules: {
                     username: {
                         required: true,
@@ -32,9 +35,23 @@
                     email: "Введите корректный email"
                 }
             });
+
             $('#registration-form').validate({
+                invalidHandler: function() {
+                    $('#username-error').css('top', '263px');
+                    $('.registration__name').css('margin-bottom', '40px');
+                    $('.registration__number').css('margin-bottom', '40px');
+                    $('#username-error').css('left', '25px');
+                    $('#phone-error').css('top', '263px');
+                    $('#phone-error').css('left', '308px');
+                },
                 errorClass: "invalid",
                 errorElement: "div",
+                onfocusout: false,
+                submitHandler: function() {
+                    $('#registration-form')[0].reset();
+                    alert('Форма успешно отправлена!');
+                },
                 rules: {
                     username: {
                         required: true,
@@ -49,12 +66,13 @@
                 messages: {
                     username: {
                         required: "Заполните поле",
-                        minlength: "Минимальное количество символов: 2",
-                        maxlength: "Максимальное количество символов: 15"
+                        minlength: "Мин. кол-во символов: 2",
+                        maxlength: "Макс. кол-во символов: 15"
                     },
                     phone: "Заполните поле",
-                }
+                },
             });
+
 
             /*Обработка и отправка через jquery ajax*/
             $('#registration-form').on('submit', function(event) {
@@ -75,15 +93,12 @@
                         closeWindow.on('click', function() {
                             validate.removeClass('validate_active');
                         });
-                        //сброс полей
-                        $('#registration-form')[0].reset();
                     },
                     error: function(jqXHR, textStatus) {
                         console.log(jqXHR + ': ' + textStatus);
                     },
 
                 })
-
             });
 
             /*Mask form-script*/
