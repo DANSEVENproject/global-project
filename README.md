@@ -1,1 +1,1 @@
-Please check this link to see this project: https://dansevenproject.github.io/global-project/
+Please check this link to see this project: https://dansevenproject.github.io/global-project/src/
